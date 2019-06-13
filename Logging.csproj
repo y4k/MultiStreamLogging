@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Serilog" Version="2.7.1"/>
+    <PackageReference Include="Serilog.Sinks.Console" Version="3.1.1"/>
+    <PackageReference Include="Serilog.Sinks.File" Version="4.0.0"/>
+    <PackageReference Include="Akka" Version="1.3.13"/>
+    <PackageReference Include="Akka.Logger.Serilog" Version="1.3.9"/>
+    <Content Include="Program.cs"/>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="config.hocon" />
+    <EmbeddedResource Include="config.hocon" />
+  </ItemGroup>
+</Project>
